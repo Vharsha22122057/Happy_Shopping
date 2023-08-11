@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Shoping</title>
+
+  <style>
+    h1{
+      text-align:center;
+      font-size:40px;
+      font-family:Roboto;
+      color: rgb(0,50,100);
+    }
+    #banner{
+      height: 800px;
+      width: 100%;
+      object-fit:cover;
+    }
+    h2{
+      text-align:center;
+      font-size:30px;
+      font-family:Roboto;
+      color: rgb(0,50,100);
+    }
+
+    container{
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  </style>>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+  <h1>Happy Shopping</h1>
+  <img id='banner' src="https://happyshopping--vharsha-thirume.repl.co/static/banner.avif" height='320px'alt="Italian Trulli">
+  
+    <h2>Login</h2>
+    {% if message %}
+      <div class="alert alert-danger" role="alert">
+        {{ message }}
+      </div>
+    {% endif %}
+    <form method="POST" action="/login">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <h2>About Us</h2>
+    <p>This shopping app is going to make your work easy and time saving.All you need to do is, add the items to cart and bill it.Its Done!!! The items will be in your door step</p>
+    <button>Contact us</button>
+    <p>Copyright 2023, Vharsha</p>
+  </div>
+</body>
+</html>
